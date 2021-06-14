@@ -1,7 +1,6 @@
 package com.training.array.util;
 
 import com.training.array.entity.CustomArray;
-import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

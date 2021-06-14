@@ -1,4 +1,4 @@
-package com.training.array.reader;
+package com.training.array.reader.impl;
 
 import com.training.array.entity.CustomArray;
 import com.training.array.exception.ArrayReaderException;

@@ -1,6 +1,7 @@
 package com.training.array.parser;
 
 import com.training.array.entity.CustomArray;
+import com.training.array.parser.impl.ArraySourceParserImpl;
 
 public class ArraySourceParser implements ArraySourceParserImpl {
 

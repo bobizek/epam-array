@@ -3,7 +3,8 @@ package com.training.array.reader;
 import com.training.array.entity.CustomArray;
 import com.training.array.exception.ArrayReaderException;
 import com.training.array.parser.ArraySourceParser;
-import com.training.array.validator.ArraySourceValidatorImpl;
+import com.training.array.reader.impl.ArrayReaderImpl;
+import com.training.array.validator.impl.ArraySourceValidatorImpl;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -11,7 +12,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class ArrayReader implements ArrayReaderImpl{
+public class ArrayReader implements ArrayReaderImpl {
 
     private final String filepath;
     private final ArraySourceParser parser;
