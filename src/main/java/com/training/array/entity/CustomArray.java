@@ -46,14 +46,14 @@ public class CustomArray {
     }
     public int getAt(int index) {
         if (index >= length) {
-            throw new IndexOutOfBoundsException("Provided index " + index + " while array lenght is " + length());
+            throw new IndexOutOfBoundsException("Provided index " + index + " while array length is " + length());
         }
         return customArray[index];
     }
 
     public void setAt(int index, int newValue) {
         if (index >= length) {
-            throw new IndexOutOfBoundsException("Provided index " + index + " while array lenght is " + length());
+            throw new IndexOutOfBoundsException("Provided index " + index + " while array length is " + length());
         }
         customArray[index] = newValue;
     }
@@ -102,7 +102,7 @@ public class CustomArray {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         CustomArray that = (CustomArray) o;
-        return initialCapacity == that.initialCapacity && length == that.length && capacity == that.capacity && Arrays.equals(customArray, that.customArray);
+        return length == that.length && capacity == that.capacity && Arrays.equals(customArray, that.customArray);
     }
 
     @Override
