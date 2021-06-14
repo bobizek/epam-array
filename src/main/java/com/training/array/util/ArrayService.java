@@ -4,7 +4,7 @@ import com.training.array.entity.CustomArray;
 
 public class ArrayService {
 
-    public static int minElement(CustomArray array) {
+    public static int findMinElement(CustomArray array) {
         int min = array.getAt(0);
         for (int i = 1; i < array.length(); ++i) {
             if (array.getAt(i) < min) {
@@ -14,7 +14,7 @@ public class ArrayService {
         return min;
     }
 
-    public static int maxElement(CustomArray array) {
+    public static int findMaxElement(CustomArray array) {
         int max = array.getAt(0);
         for (int i = 1; i < array.length(); ++i) {
             if (array.getAt(i) > max) {

@@ -11,7 +11,7 @@ class ArrayServiceTest {
     void minElement() {
         CustomArray array = new CustomArray(1, 2, 7, 3, 4, 10, 9, 11, 8);
         int expected = 1;
-        int actual = ArrayService.minElement(array);
+        int actual = ArrayService.findMinElement(array);
         assertEquals(actual, expected);
     }
 
@@ -19,7 +19,7 @@ class ArrayServiceTest {
     void maxElement() {
         CustomArray array = new CustomArray(1, 2, 7, 3, 4, 10, 9, 11, 8);
         int expected = 11;
-        int actual = ArrayService.minElement(array);
+        int actual = ArrayService.findMinElement(array);
         assertEquals(actual, expected);
     }
 
