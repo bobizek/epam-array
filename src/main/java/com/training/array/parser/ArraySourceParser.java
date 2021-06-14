@@ -5,7 +5,7 @@ import com.training.array.parser.impl.ArraySourceParserImpl;
 
 public class ArraySourceParser implements ArraySourceParserImpl {
 
-    private final static String LINE_SPLIT_REGEX = "\\\\s+\"";
+    private static final String LINE_SPLIT_REGEX = "\\\\s+\"";
 
     public CustomArray parseToInteger(String line) {
         CustomArray integerCustomArray = new CustomArray();
