@@ -113,10 +113,10 @@ public class CustomArray {
 
     @Override
     public String toString() {
-        return new StringJoiner(", ", CustomArray.class.getSimpleName() + "[", "]")
-                .add("array=" + Arrays.toString(customArray))
-                .add("length=" + length)
-                .add("capacity=" + capacity)
+        return new StringJoiner(", ", CustomArray.class.getSimpleName() + " [", "]")
+                .add("array = " + Arrays.toString(customArray))
+                .add("length = " + length)
+                .add("capacity = " + capacity)
                 .toString();
     }
 }
