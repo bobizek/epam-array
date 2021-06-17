@@ -9,7 +9,7 @@ public final class Sort {
 	static final Logger logger = LogManager.getLogger(Sort.class);
 
 	private static void checkArray(CustomArray array) {
-		if (array == null || array.length() == 0) {
+		if (array == null || array.getLength() == 0) {
 			logger.error("Sorting array cannot be null or empty");
 			throw new IllegalArgumentException("Sorting array cannot be null or empty");
 		}
@@ -18,7 +18,7 @@ public final class Sort {
 	public static CustomArray quickSort(CustomArray array) {
 		checkArray(array);
 		logger.debug("Sorting array: " + array);
-		return (array.length() == 1) ? array : quickSort(array, 0, array.length() - 1);
+		return (array.getLength() == 1) ? array : quickSort(array, 0, array.getLength() - 1);
 	}
 
 	private static CustomArray quickSort(CustomArray array, int leftMarker, int rightMarker) {
@@ -58,8 +58,8 @@ public final class Sort {
 
 		checkArray(array);
 
-	    for (int i = 0; i < array.length() - 1; ++i) {
-				for (int j = array.length() - 1; j > i; --j) {
+	    for (int i = 0; i < array.getLength() - 1; ++i) {
+				for (int j = array.getLength() - 1; j > i; --j) {
 					if (array.getAt(j - 1) > array.getAt(j)) {
 						array.switchTwo(j - 1, j);
 					}
@@ -72,9 +72,9 @@ public final class Sort {
 
 		checkArray(array);
 
-		for (int left = 0; left < array.length(); ++left) {
+		for (int left = 0; left < array.getLength(); ++left) {
 			int minIndex = left;
-			for (int i = left; i < array.length(); ++i) {
+			for (int i = left; i < array.getLength(); ++i) {
 				if (array.getAt(i) < array.getAt(minIndex)) {
 					minIndex = i;
 				}

@@ -44,19 +44,6 @@ public class CustomArray {
         customArray[first] = customArray[last];
         customArray[last] = buffer;
     }
-    public int getAt(int index) {
-        if (index >= length) {
-            throw new IndexOutOfBoundsException("Provided index " + index + " while array length is " + length());
-        }
-        return customArray[index];
-    }
-
-    public void setAt(int index, int newValue) {
-        if (index >= length) {
-            throw new IndexOutOfBoundsException("Provided index " + index + " while array length is " + length());
-        }
-        customArray[index] = newValue;
-    }
 
     public void removeAt(int index) {
         if (customArray != null && length > index) {
@@ -77,6 +64,10 @@ public class CustomArray {
         return -1;
     }
 
+    public boolean isEmpty() {
+        return length > 0;
+    }
+
     public void clear() {
         if(customArray != null && length > 0)
         {
@@ -87,24 +78,31 @@ public class CustomArray {
         length = 0;
     }
 
-    public int length() {
+    public int getLength() {
         return length;
     }
-    public int capacity() {
+
+    public int getCapacity() {
         return capacity;
-    }
-    public boolean isEmpty() {
-        return length > 0;
     }
 
     public int[] getPrimitive() {
-        return customArray;
+        int[] buff = new int[length];
+        System.arraycopy(customArray, 0, buff, 0, length);
+        return buff;
+    }
+    public int getAt(int index) {
+        if (index >= length) {
+            throw new IndexOutOfBoundsException("Provided index " + index + " while array length is " + getLength());
+        }
+        return customArray[index];
     }
 
-    public void setPrimitive(int... values) {
-        this.customArray = values;
-        this.length = values.length;
-        this.capacity = this.length;
+    public void setAt(int index, int newValue) {
+        if (index >= length) {
+            throw new IndexOutOfBoundsException("Provided index " + index + " while array length is " + getLength());
+        }
+        customArray[index] = newValue;
     }
 
     @Override
@@ -115,10 +113,15 @@ public class CustomArray {
         return length == that.length && capacity == that.capacity && Arrays.equals(customArray, that.customArray);
     }
 
-    @Override
-    public int hashCode() {
-        // TODO: 10.06.21
-        return super.hashCode();
+    public int hashCode(int[] a) {
+        if (a == null)
+            return 0;
+
+        int result = 1;
+        for (int element : a)
+            result = 31 * result + element;
+
+        return result;
     }
 
     @Override

@@ -6,13 +6,10 @@ import com.training.array.exception.ArrayReaderException;
 import com.training.array.parser.ArraySourceParser;
 import com.training.array.reader.ArrayReader;
 import com.training.array.validator.ArraySourceValidator;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 public class ArrayCreatorImpl implements ArrayCreator {
 
 
-    static final Logger logger = LogManager.getLogger(ArrayCreatorImpl.class);
     public ArraySourceParser parser;
     public ArraySourceValidator validator;
     public ArrayReader reader;
@@ -24,7 +21,6 @@ public class ArrayCreatorImpl implements ArrayCreator {
     }
 
     public CustomArray createIntegerArrayFromFile() throws ArrayReaderException {
-        logger.info("AAAA");
         return parser.parseToInteger(reader.readArray());
     }
 }

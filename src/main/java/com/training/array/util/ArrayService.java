@@ -7,7 +7,7 @@ public class ArrayService {
 
     public static int findMinElement(CustomArray array) {
         int min = array.getAt(0);
-        for (int i = 1; i < array.length(); ++i) {
+        for (int i = 1; i < array.getLength(); ++i) {
             if (array.getAt(i) < min) {
                 min = array.getAt(i);
             }
@@ -21,7 +21,7 @@ public class ArrayService {
 
     public static int findMaxElement(CustomArray array) {
         int max = array.getAt(0);
-        for (int i = 1; i < array.length(); ++i) {
+        for (int i = 1; i < array.getLength(); ++i) {
             if (array.getAt(i) > max) {
                 max = array.getAt(i);
             }
@@ -35,7 +35,7 @@ public class ArrayService {
 
     public static int sumElements(CustomArray array) {
         int sum = 0;
-        for (int i = 0; i < array.length(); ++i) {
+        for (int i = 0; i < array.getLength(); ++i) {
             sum += array.getAt(i);
         }
         return sum;
@@ -46,7 +46,7 @@ public class ArrayService {
     }
 
     public static CustomArray makeElementsPositive(CustomArray array){
-        for (int i = 0; i < array.length(); ++i) {
+        for (int i = 0; i < array.getLength(); ++i) {
             if (array.getAt(i) < 0) {
                 array.setAt(i, array.getAt(i) * (-1));
             }
@@ -60,7 +60,7 @@ public class ArrayService {
     }
 
     public static float average(CustomArray array) {
-        return (float)ArrayService.sumElements(array) / array.length();
+        return (float)ArrayService.sumElements(array) / array.getLength();
     }
 
     public static double averageUsingStream(CustomArray array) {
@@ -69,7 +69,7 @@ public class ArrayService {
 
     public static int negativeElements(CustomArray array) {
         int negs = 0;
-        for (int i = 0; i < array.length(); ++i) {
+        for (int i = 0; i < array.getLength(); ++i) {
             if (array.getAt(i) < 0) {
                 negs++;
             }
@@ -83,7 +83,7 @@ public class ArrayService {
 
     public static int positiveElements(CustomArray array) {
         int pos = 0;
-        for (int i = 0; i < array.length(); ++i) {
+        for (int i = 0; i < array.getLength(); ++i) {
             if (array.getAt(i) > 0) {
                 pos++;
             }

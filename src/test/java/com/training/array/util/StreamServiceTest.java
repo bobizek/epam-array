@@ -5,61 +5,61 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class ArrayServiceTest {
+class StreamServiceTest {
 
     @Test
     void findMinElement() {
         CustomArray array = new CustomArray(1, 2, 7, 3, 4, 10, 9, 11, 8);
         int expected = 1;
-        int actual = ArrayService.findMinElement(array);
-        assertEquals(actual, expected);
+        int actual = StreamService.findMinElement(array);
+        assertEquals(expected, actual);
     }
 
     @Test
     void findMaxElement() {
         CustomArray array = new CustomArray(1, 2, 7, 3, 4, 10, 9, 11, 8);
         int expected = 11;
-        int actual = ArrayService.findMaxElement(array);
-        assertEquals(actual, expected);
+        int actual = StreamService.findMaxElement(array);
+        assertEquals(expected, actual);
     }
 
     @Test
     void sumElements() {
         CustomArray array = new CustomArray(1, 2, 3, 4);
         int expected = 10;
-        int actual = ArrayService.sumElements(array);
-        assertEquals(actual, expected);
+        int actual = StreamService.sumElements(array);
+        assertEquals(expected, actual);
     }
 
     @Test
     void makeElementsPositive() {
         CustomArray array = new CustomArray(1, 2, -3, 4, -6);
         CustomArray expected = new CustomArray(1, 2, 3, 4, 6);
-        CustomArray actual = ArrayService.makeElementsPositive(array);
-        assertEquals(actual, expected);
+        CustomArray actual = StreamService.makeElementsPositive(array);
+        assertEquals(expected, actual);
     }
 
     @Test
     void average() {
         CustomArray array = new CustomArray(5, 1, 3, 5);
-        float expected = 3.5F;
-        float actual = ArrayService.average(array);
-        assertEquals(actual, expected);
+        double expected = 3.5;
+        double actual = StreamService.average(array);
+        assertEquals(expected, actual);
     }
 
     @Test
     void negativeElements() {
         CustomArray array = new CustomArray(1, 2, -3, 4, -6, 8, 9);
         int expected = 2;
-        int actual = ArrayService.negativeElements(array);
-        assertEquals(actual, expected);
+        long actual = StreamService.negativeElements(array);
+        assertEquals(expected, actual);
     }
 
     @Test
     void positiveElements() {
         CustomArray array = new CustomArray(1, 2, -3, 4, -6, 8, 9);
         int expected = 5;
-        int actual = ArrayService.positiveElements(array);
-        assertEquals(actual, expected);
+        long actual = StreamService.positiveElements(array);
+        assertEquals(expected, actual);
     }
 }
