@@ -10,9 +10,9 @@ import com.training.array.validator.ArraySourceValidator;
 public class ArrayCreatorImpl implements ArrayCreator {
 
 
-    public ArraySourceParser parser;
-    public ArraySourceValidator validator;
-    public ArrayReader reader;
+    private ArraySourceParser parser;
+    private ArraySourceValidator validator;
+    private ArrayReader reader;
 
     public ArrayCreatorImpl(ArrayReader reader, ArraySourceParser parser, ArraySourceValidator validator) {
         this.reader = reader;
