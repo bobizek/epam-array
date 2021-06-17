@@ -9,6 +9,7 @@ import com.training.array.reader.ArrayReader;
 import com.training.array.reader.impl.ArrayReaderImpl;
 import com.training.array.validator.ArraySourceValidator;
 import com.training.array.validator.impl.IntegerArraySourceValidatorImpl;
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -21,7 +22,8 @@ class ArrayCreatorImplTest {
         ArraySourceParser parser = new ArraySourceParserImpl();
         ArrayReader reader = new ArrayReaderImpl("src//main//resources//textfiles//file.txt", validator);
         ArrayCreator creator = new ArrayCreatorImpl(reader, parser, validator);
-        CustomArray arr = creator.createIntegerArrayFromFile();
-        System.out.println(arr);
+        CustomArray actual = creator.createIntegerArrayFromFile();
+        CustomArray expected = new CustomArray(11, 2, 3, 1, 9, 8, 19);
+        assertEquals(actual, expected);
     }
 }

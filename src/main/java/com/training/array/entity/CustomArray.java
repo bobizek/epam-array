@@ -97,6 +97,16 @@ public class CustomArray {
         return length > 0;
     }
 
+    public int[] getPrimitive() {
+        return customArray;
+    }
+
+    public void setPrimitive(int... values) {
+        this.customArray = values;
+        this.length = values.length;
+        this.capacity = this.length;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

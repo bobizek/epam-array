@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="jwd-quicksort" target="1.9" />
+      <module name="jwd-quicksort" target="14" />
     </bytecodeTargetLevel>
   </component>
 </project>
