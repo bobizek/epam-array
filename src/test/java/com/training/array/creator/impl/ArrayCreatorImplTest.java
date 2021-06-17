@@ -9,7 +9,6 @@ import com.training.array.reader.ArrayReader;
 import com.training.array.reader.impl.ArrayReaderImpl;
 import com.training.array.validator.ArraySourceValidator;
 import com.training.array.validator.impl.IntegerArraySourceValidatorImpl;
-import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

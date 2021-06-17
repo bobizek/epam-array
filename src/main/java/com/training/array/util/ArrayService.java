@@ -1,8 +1,6 @@
 package com.training.array.util;
 
 import com.training.array.entity.CustomArray;
-
-import java.util.OptionalDouble;
 import java.util.stream.IntStream;
 
 public class ArrayService {
