@@ -1,0 +1,4 @@
+2021-06-17 02:20:34,221 ERROR c.t.a.u.Sort [main] Sorting array cannot be null or empty
+2021-06-17 02:21:04,308 ERROR c.t.a.u.Sort [main] Sorting array cannot be null or empty
+2021-06-17 02:24:03,918 INFO c.t.a.c.i.ArrayCreatorImpl [main] AAAA
+2021-06-17 02:24:03,922 INFO c.t.a.r.i.ArrayReaderImpl [main] Received valid line containing values: 11 2 3 1 9 8 19
