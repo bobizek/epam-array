@@ -34,7 +34,7 @@ public class ArrayReaderImpl implements ArrayReader {
             throw new ArrayReaderException("Source file doesn't contain any valid lines for parsing integer array");
         } catch (IOException e) {
             logger.error("Couldn't read array cause of " + e);
-            throw new ArrayReaderException("Cannot read array", e);
+            throw new ArrayReaderException("Cannot read array: ", e);
         }
     }
 

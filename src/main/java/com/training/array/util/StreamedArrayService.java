@@ -4,7 +4,7 @@ import com.training.array.entity.CustomArray;
 
 import java.util.stream.IntStream;
 
-public class StreamService {
+public class StreamedArrayService {
 
     public static int findMinElement(CustomArray array) {
         return IntStream.of(array.getPrimitive()).min().orElseThrow(IllegalArgumentException::new);
@@ -26,7 +26,7 @@ public class StreamService {
     }
 
     public static double average(CustomArray array) {
-        return IntStream.of(array.getPrimitive()).average().getAsDouble();
+        return IntStream.of(array.getPrimitive()).average().orElse(0.0D);
     }
 
     public static long negativeElements(CustomArray array) {
